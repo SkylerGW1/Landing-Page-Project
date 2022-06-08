@@ -1,34 +1,8 @@
 nav a {
     text-decoration: none;
     display: block;
-    
-
 
 }
- 
 nav ul {
     list-style: none;
 }
-.hero_image {
-    background-image: url("background.jpg");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-.parent {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    }
-    
-.div1 { grid-area: 1 / 1 / 2 / 6; 
- width: auto;
-}
-    
-.div2 { grid-area: 3 / 1 / 4 / 3; }
-.div3 { grid-area: 4 / 1 / 5 / 2; }
-
