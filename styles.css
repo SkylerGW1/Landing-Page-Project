@@ -1,8 +1,74 @@
-nav a {
-    text-decoration: none;
-    display: block;
+/* Variable for colors */
+:root {
+    --yellow: #F2D479;
+    --orange: #D94D1A;
+}
+
+body { 
+    font-family: 'Nunito', sans-serif;
+    color: black;
+    font-size: 120%;
 
 }
-nav ul {
-    list-style: none;
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
 }
+/* Buttons */
+a.button {
+    display: inline-block;
+    width: auto;
+    padding: 0.5em 1em;
+    background-color: var(--yellow);
+    border-radius: 1em ;
+    color: black;
+    text-decoration: none;
+}
+/* Nav Bar styling */
+#hero nav {
+    display: flex;
+    justify-content: space-between;
+    
+}
+#hero nav ul { 
+    list-style-type: none;
+    display: flex;
+    flex-direction:  row;
+}
+#hero nav a { 
+    display:  block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: black; 
+    
+}
+
+/* Style the hero unit grid */ 
+#hero-nav {
+    grid-area: nav;
+}
+#tagline {
+    grid-area: tag;
+}
+#hero {
+    display:  grid;
+    grid-template-columns: 1fr 1fr 2fr 2fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-areas: 
+    ". nav nav nav nav ."
+    ". . . . . ."
+    ". tag tag . . .";
+    background-image: url(background.jpg);
+    background-size: cover;
+
+}
+
+
+
+
+/*Styling the footer and other items*/
+footer {
+    padding: 0.5em 1em;
+} 
+
+
