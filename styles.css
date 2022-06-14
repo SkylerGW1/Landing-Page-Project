@@ -6,12 +6,12 @@
 
 body { 
     font-family: 'Nunito', sans-serif;
-    color: black;
+    color: white;
     font-size: 120%;
-
+    background-color: black;
 }
 
-h1, h2, h3 {
+h1, h2, h3, nav, #button, .largebutton {
     font-family: 'Roboto', sans-serif;
 }
 /* Buttons */
@@ -21,54 +21,100 @@ a.button {
     padding: 0.5em 1em;
     background-color: var(--yellow);
     border-radius: 1em ;
-    color: black;
     text-decoration: none;
+    color: black !important;
+    
 }
+a.largebutton {
+    display: inline-block;
+    width: auto;
+    padding: 0.5em 1em;
+    background-color: var(--yellow);
+    border-radius: 1em ;
+    text-decoration: none;
+    font-size: 150%;
+    color: black !important;
+}
+
 /* Nav Bar styling */
 #hero nav {
     display: flex;
     justify-content: space-between;
+    padding: 0.5em 1em;
+    
     
 }
 #hero nav ul { 
     list-style-type: none;
     display: flex;
     flex-direction:  row;
+    margin: 0;
+    align-items: center;
+    
 }
 #hero nav a { 
     display:  block;
     padding: 0.5em 1em;
-    text-decoration: none;
-    color: black; 
+    text-decoration: none; 
+    font-size: 125%;
+    color: white;
     
 }
-
 /* Style the hero unit grid */ 
+#hero { 
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-color: rgba(133, 117, 101, 0.774); /* Tint color */
+    background-blend-mode: multiply;    
+}
 #hero-nav {
     grid-area: nav;
 }
 #tagline {
     grid-area: tag;
-}
-#hero {
-    display:  grid;
-    grid-template-columns: 1fr 1fr 2fr 2fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
-    grid-template-areas: 
-    ". nav nav nav nav ."
-    ". . . . . ."
-    ". tag tag . . .";
-    background-image: url(background.jpg);
-    background-size: cover;
-
+    align-self: center;
 }
 
+#title {
+    font-size: 300%;
+}
 
-
+section {
+    padding: .5em 1em;
+}
 
 /*Styling the footer and other items*/
 footer {
-    padding: 0.5em 1em;
+    padding: .25em;
+    background-color: #F2D479;
+    color: black;
+    font-weight: 800;
 } 
+a {
+    color: darkgray;
+}
 
+article {
+    width: 50%;
+    text-align: left;
+    margin: auto;
+    padding: 2em;
+}
 
+@media only screen and (min-width: 850px) {
+    #hero {
+        display:  grid;
+        grid-template-columns: 1fr 1fr 2fr 2fr 1fr 1fr; 
+        grid-template-rows: minmax(80px, auto) 
+        minmax(10px, auto)
+        minmax(50vh, 75vh)
+        minmax(70px, auto);
+        grid-template-areas: 
+        ". nav nav nav nav ."
+        ". . . . . ."
+        ". tag tag . . .";
+
+    }
+}
